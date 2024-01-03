@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User</title>
+</head>
+<body>
+    <div class="container1">
+        <h1>Create User</h1>
+        <form action="{% url 'uprec' mem.id %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="first" placeholder="First Name" value="{{mem.first_name}}" class="input1">
+            <input type="text" name="last" placeholder="Last Name" value="{{mem.last_name}}" class="input1"><br><br>
+            <input type="text" name="email" placeholder="Email Address" value="{{mem.email_address}}" class="input2"><br><br>
+            <input type="text" name="phone" placeholder="Phone Number" value="{{mem.phone_no}}" class="input2"><br><br>
+            <input type="text" name="place" placeholder="Address" value="{{mem.place}}" class="input2"><br><br>
+            <button type="submit" id="new">Update</button>
+        </form>
+    </div>
+</body>
+</html>
