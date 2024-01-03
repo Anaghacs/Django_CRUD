@@ -13,6 +13,7 @@
 <body>
     <div class="container1">
         <h1>Create User</h1>
+        <div class="add">
         <form action="{% url 'addrec' %}" method="post">
             {% csrf_token %}
             <input type="text" name="first" placeholder="First Name" class="input1">
@@ -22,6 +23,7 @@
             <input type="text" name="place" placeholder="Address" class="input2"><br><br>
             <button type="submit" id="new">Create</button>
         </form>
+        </div>
     </div>
 </body>
 </html>
