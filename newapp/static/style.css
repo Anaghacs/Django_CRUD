@@ -30,21 +30,6 @@
     text-align: center;
 }
 
-#customers #up {
-    background-color: blue;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    color: white;
-}
-
-#customers #del {
-    background-color: red;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    color: white;
-}
 
 #customers button {
     width: 100%;
@@ -58,14 +43,6 @@
     color: black;
     border: none;
     width: 250px;    
-}
-
-.container2 #new1 {
-    background-color: blue;
-    border-color: red;
-    border-radius: 5px;
-    padding: 8px;
-    color: white;
 }
 
 h1 {
@@ -88,12 +65,6 @@ h1 {
     width: 500px; 
 }
 
-
-/* .container2 {
-    margin: 80px 240px 60px 240px;
-    padding: 0px 100px 100px 100px;
-} */
-
 .container #new3 {
     padding: 8px;
     background-color: rgb(27, 24, 199);
@@ -109,7 +80,14 @@ h1 {
 .container1 .input2{
     width: 475px;
 }
-i{
-    width: 100px;
-    height: 500px;
+
+.fa-solid, .fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 80px;
+    color: black;
+    font-size: 30px;
+}
+#username-error{
+    color: red;
+    font-size: 20px ;
 }

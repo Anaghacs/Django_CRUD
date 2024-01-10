@@ -7,18 +7,27 @@
 </head>
 {% load static %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'script.js' %}">
+
 <body>
     <div class="container1">
         <h1>Update User</h1>
-        <form action="{% url 'uprec' user.id %}" method="post">
+        <form action="{% url 'uprec' user.id %}" method="post" onsubmit="validate()">
             {% csrf_token %}
             <input type="text" name="first" placeholder="First Name" value="{{user.first_name}}" class="input1">
+
             <input type="text" name="last" placeholder="Last Name" value="{{user.last_name}}" class="input1"><br><br>
+
             <input type="text" name="email" placeholder="Email Address" value="{{user.email_address}}" class="input2"><br><br>
+
             <input type="text" name="phone" placeholder="Phone Number" value="{{user.phone_no}}" class="input2"><br><br>
+
             <input type="text" name="place" placeholder="Address" value="{{user.place}}" class="input2"><br><br>
-            <button type="submit" id="new">Save</button>
+
+            <button type="submit" id="new" onclick="validate()">Save</button>
         </form>
+        <p id="username-error" ></p>
+
     </div>
 </body>
 </html>

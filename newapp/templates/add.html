@@ -9,21 +9,27 @@
 </head>
 {% load static %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'script.js' %}">
+<script src="{% static 'script.js' %}"></script>
+
 
 <body>
+    
     <div class="container1">
         <h1>Create User</h1>
         <div class="add">
-        <form action="{% url 'addrec' %}" method="post">
+        <form action="{% url 'addrec' %}" method="post" name="myForm" onclick="validate()">
             {% csrf_token %}
             <input type="text" name="first" placeholder="First Name" class="input1">
             <input type="text" name="last" placeholder="Last Name" class="input1"><br><br>
             <input type="text" name="email" placeholder="Email Address" class="input2"><br><br>
             <input type="text" name="phone" placeholder="Phone Number" class="input2"><br><br>
             <input type="text" name="place" placeholder="Address" class="input2"><br><br>
-            <button type="submit" id="new">Create</button>
+            <button type="submit" id="new" onclick="validate()">Create</button>
         </form>
         </div>
+        <p id="username-error" ></p>
+
     </div>
 </body>
 </html>
