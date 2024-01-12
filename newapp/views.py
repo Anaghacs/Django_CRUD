@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Users
+from django.core.exceptions import ValidationError
 
 # Create your views here.
 def index(request):
@@ -8,6 +9,7 @@ def index(request):
 
 def add(request):
     return render(request,'add.html')
+
 
 def addrec(request):
     first_name=request.POST['first']

@@ -10,7 +10,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
 <link rel="stylesheet" href="{% static 'script.js' %}">
-<script src="{% static 'script.js' %}"></script>
+<!-- <script src="{% static 'script.js' %}"></script> -->
 
 
 <body>
@@ -27,9 +27,13 @@
             <input type="text" name="place" placeholder="Address" class="input2"><br><br>
             <button type="submit" id="new" onclick="validate()">Create</button>
         </form>
-        </div>
+        </div>  
         <p id="username-error" ></p>
-
     </div>
+    
+    
+    {% load static %}
+    <script src="{% static 'script.js' %}"></script>
+
 </body>
 </html>
